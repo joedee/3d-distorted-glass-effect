@@ -19,10 +19,6 @@
   width: 100%;
   padding-bottom: 20px;
   border-bottom: 1px solid black; /* Line below header */
-  position: relative;
-  z-index: 100;
-  background-color: #9ef0f0; /* Match page background */
-  padding: 1rem 2rem;
 }
 
 .logo {
@@ -76,35 +72,24 @@
 }
 
 .mainHeading {
-  font-family: 'Merriweather', serif;
-  font-size: 5rem;
+  font-family: 'Merriweather', serif; /* Assuming Merriweather is available, or use a generic serif */
+  font-size: 5rem; /* Large font size, adjust as needed */
   line-height: 1.1;
   font-weight: normal;
   margin: 0;
-  max-width: 60%;
-  position: relative;
-  z-index: 3; /* Above the 3D scene */
-  background-color: rgba(158, 240, 240, 0.8); /* Slightly transparent to show some depth */
-  padding: 1rem;
-  margin: 2rem 0 0 2rem;
+  max-width: 60%; /* Prevent heading from being too wide */
 }
 
 .sceneWrapper {
-  position: fixed; /* Fixed to viewport */
-  top: 0;
+  position: absolute; /* Take out of normal flow to allow overlap */
+  top: 0; /* Align with the top of mainContent */
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2; /* Above most content but below header */
-  pointer-events: none; /* Allow clicks to pass through to elements behind */
-}
-
-/* Allow interaction with the 3D canvas */
-.sceneWrapper canvas {
-  pointer-events: auto;
+  justify-content: center; /* Center scene horizontally */
+  align-items: center; /* Center scene vertically */
+  z-index: 1; /* Behind the heading */
 }
 
 /* Ensure the canvas inside sceneWrapper fills it */
