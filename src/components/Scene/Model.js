@@ -4,7 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useControls } from 'leva'
 
 export default function Model() {
-    const { nodes } = useGLTF("/medias/spark-glass.glb");
+    const { nodes } = useGLTF("/medias/spark.glb");
     const { viewport } = useThree()
     const torus = useRef(null);
     
