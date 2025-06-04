@@ -10,6 +10,8 @@ export default function Model() {
     
     useFrame( () => {
         torus.current.rotation.z += 0.02
+        torus.current.rotation.x += 0.02
+        torus.current.rotation.y += 0.02
     })
 
     const materialProps = useControls({
@@ -22,7 +24,7 @@ export default function Model() {
     })
     
     return (
-        <group scale={viewport.width / 20} >
+        <group scale={viewport.width / 18} >
             <Text font={'/fonts/Merriweather.ttf'} position={[0, 0, -1]} fontSize={1.5} color="white" anchorX="center" anchorY="middle">
                 It&apos;s time to see health differently.
             </Text>
