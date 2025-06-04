@@ -22,9 +22,9 @@ export default function Model() {
     })
     
     return (
-        <group scale={viewport.width / 2} >
-            <Text font={'/fonts/Merriweather.ttf'} position={[0, 0, -1]} fontSize={.5} color="black" anchorX="center" anchorY="middle">
-                It&apos;s time to see health differently
+        <group scale={viewport.width / 3.75} >
+            <Text font={'/fonts/PPNeueMontreal-Bold.otf'} position={[0, 0, -1]} fontSize={0.5} color="white" anchorX="center" anchorY="middle">
+                hello world!
             </Text>
             <mesh ref={torus} {...nodes.Torus002}>
                 <MeshTransmissionMaterial {...materialProps}/>
