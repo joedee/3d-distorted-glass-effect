@@ -9,7 +9,7 @@ export default function Model() {
     const torus = useRef(null);
     
     useFrame( () => {
-        torus.current.rotation.x += 0.02
+        torus.current.rotation.z += 0.02
     })
 
     const materialProps = useControls({
@@ -23,8 +23,8 @@ export default function Model() {
     
     return (
         <group scale={viewport.width / 25} >
-            <Text font={'/fonts/PPNeueMontreal-Bold.otf'} position={[0, 0, -1]} fontSize={1.5} color="white" anchorX="center" anchorY="middle">
-                hello world!
+            <Text font={'/fonts/Merriweather.ttf'} position={[0, 0, -1]} fontSize={1.5} color="white" anchorX="center" anchorY="middle">
+                It&apos;s time to see health differently.
             </Text>
             <mesh ref={torus} {...nodes.Torus002}>
                 <MeshTransmissionMaterial {...materialProps}/>
