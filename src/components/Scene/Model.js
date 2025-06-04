@@ -24,7 +24,7 @@ export default function Model() {
     return (
         <group scale={viewport.width / 20} >
             <Text font={'/fonts/Merriweather.ttf'} position={[0, 0, -1]} fontSize={1.5} color="white" anchorX="center" anchorY="middle">
-                It&apos;s time to d
+                It&apos;s time to see health differently.
             </Text>
             <mesh ref={torus} {...nodes.Torus002}>
                 <MeshTransmissionMaterial {...materialProps}/>
