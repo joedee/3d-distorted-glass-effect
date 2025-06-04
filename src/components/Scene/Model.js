@@ -4,7 +4,7 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useControls } from 'leva'
 
 export default function Model() {
-    const { nodes } = useGLTF("/medias/spark.glb");
+    const { nodes } = useGLTF("/medias/torrus.glb");
     const { viewport } = useThree()
     const torus = useRef(null);
     
@@ -26,7 +26,7 @@ export default function Model() {
             <Text font={'/fonts/PPNeueMontreal-Bold.otf'} position={[0, 0, -1]} fontSize={0.5} color="white" anchorX="center" anchorY="middle">
                 hello world!
             </Text>
-            <mesh ref={torus} {...nodes['Cube005']}>
+            <mesh ref={torus} {...nodes.Torus002}>
                 <MeshTransmissionMaterial {...materialProps}/>
             </mesh>
         </group>
