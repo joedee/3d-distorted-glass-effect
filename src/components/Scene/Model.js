@@ -10,6 +10,7 @@ export default function Model() {
     
     useFrame( () => {
         torus.current.rotation.z += 0.02
+        torus.current.rotation.x += 0.02
     })
 
     const materialProps = useControls({
