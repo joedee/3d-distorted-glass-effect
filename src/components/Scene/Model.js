@@ -15,16 +15,16 @@ export default function Model() {
     })
 
     const materialProps = useControls({
-        thickness: { value: 0.2, min: 0, max: 3, step: 0.05 },
+        thickness: { value: 0.15, min: 0, max: 3, step: 0.05 },
         roughness: { value: 0, min: 0, max: 1, step: 0.1 },
         transmission: {value: 1, min: 0, max: 1, step: 0.1},
         ior: { value: 1.2, min: 0, max: 3, step: 0.1 },
-        chromaticAberration: { value: 0.02, min: 0, max: 1},
+        chromaticAberration: { value: 0.00, min: 0, max: 1},
         backside: { value: true},
     })
     
     return (
-        <group scale={viewport.width / 22} >
+        <group scale={viewport.width / 20} >
             <Text font={'/fonts/Merriweather.ttf'} position={[0, 0, -1]} fontSize={1.5} color="black" anchorX="center" anchorY="middle">
                 It&apos;s time to see health differently.
             </Text>
