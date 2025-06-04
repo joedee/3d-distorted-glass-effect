@@ -21,12 +21,18 @@ export default function Model() {
     })
 
     const materialProps = useControls({
-        thickness: { value: 0.15, min: 0, max: 3, step: 0.05 },
+        thickness: { value: 0.1, min: 0, max: 3, step: 0.05 },
         roughness: { value: 0, min: 0, max: 1, step: 0.1 },
         transmission: {value: 1, min: 0, max: 1, step: 0.1},
-        ior: { value: 2.6, min: 0, max: 3, step: 0.1 },
-        chromaticAberration: { value: 0.00, min: 0, max: 1},
+        ior: { value: 1.5, min: 0, max: 3, step: 0.1 },
+        chromaticAberration: { value: 0.02, min: 0, max: 1, step: 0.01 }, // Slightly increased default for visibility
         backside: { value: true},
+        color: { value: '#ffffff' },
+        distortion: { value: 0.2, min: 0, max: 1, step: 0.01 },
+        distortionScale: { value: 0.5, min: 0, max: 1, step: 0.01 },
+        temporalDistortion: { value: 0.0, min: 0, max: 1, step: 0.01 }, // Default to 0 (off)
+        attenuationDistance: { value: 0.75, min: 0, max: 2, step: 0.01 }, // Default to 0.5, adjust as needed
+        attenuationColor: { value: '#ffffff' } // Color light shifts to, often white or a light tint
     })
     
     return (
