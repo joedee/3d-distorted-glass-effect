@@ -9,17 +9,17 @@ export default function Model() {
     const torus = useRef(null);
     
     useFrame( () => {
-        torus.current.rotation.z += 0.002
-        torus.current.rotation.x += 0.002
-        torus.current.rotation.y += 0.002
+        torus.current.rotation.z += 0.009
+        torus.current.rotation.x += 0.009
+        torus.current.rotation.y += 0.009
     })
 
     const materialProps = useControls({
-        thickness: { value: 0.2, min: 0, max: 3, step: 0.05 },
+        thickness: { value: 0.15, min: 0, max: 3, step: 0.05 },
         roughness: { value: 0, min: 0, max: 1, step: 0.1 },
         transmission: {value: 1, min: 0, max: 1, step: 0.1},
         ior: { value: 1.2, min: 0, max: 3, step: 0.1 },
-        chromaticAberration: { value: 0.02, min: 0, max: 1},
+        chromaticAberration: { value: 0.00, min: 0, max: 1},
         backside: { value: true},
     })
     
