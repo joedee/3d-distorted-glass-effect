@@ -11,7 +11,7 @@ export default function Model() {
     
     // Calculate position for upper left corner
     const textX = -viewport.width / 1.75;  // Position from left
-    const textY = viewport.height / 2;   // Position from top
+    const textY = viewport.height / 1.85;   // Position from top
     const textZ = 0;                       // Z position (depth)
 
 
@@ -119,7 +119,7 @@ export default function Model() {
                 <Text 
                     font={'/fonts/Merriweather.ttf'} 
                     position={[textX, textY, textZ]}
-                    fontSize={1.5} 
+                    fontSize={1.2} 
                     color="black" 
                     anchorX="left"
                     anchorY="top"
