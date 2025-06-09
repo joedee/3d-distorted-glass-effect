@@ -115,7 +115,7 @@ export default function Model() {
                 <meshBasicMaterial transparent opacity={0} depthWrite={false} />
             </mesh>
 
-            <group scale={viewport.width / 18} >
+            <group scale={.85} >
                 <Text 
                     font={'/fonts/Merriweather.ttf'} 
                     position={[textX, textY, textZ]}

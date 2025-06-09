@@ -17,7 +17,15 @@ export default function Index() {
   });
 
   return (
-    <Canvas style={{background: '#9ef0f0'}}>
+    <Canvas 
+      style={{background: '#9ef0f0'}}
+      camera={{
+        position: [0, 0, 10],  // Move camera further back
+        fov: 35,  // Narrower field of view (default is 50)
+        near: 0.1,
+        far: 1000
+      }}
+    >
         <ambientLight intensity={ambientIntensity} color={ambientColor} />
         <Model />
         <directionalLight intensity={dirIntensity} color={dirColor} position={dirPosition} />
